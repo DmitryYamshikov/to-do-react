@@ -2,11 +2,11 @@ import React from 'react';
 import './app-header.css';
 
 
-const AppHeader = ()=> {
+const AppHeader = ({liked, counter})=> {
     return (
         <div className='app-header d-flex'>
             <h1>Дмитрий Ямщиков</h1>
-            <h2>5 записей, из них понравилось 0</h2>
+            <h2>{counter} записей, из них понравилось {liked}</h2>
         </div>
     )
 }
