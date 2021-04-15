@@ -64,6 +64,7 @@ export default class App extends  Component {
     }
 
     onToggleLiked(id) {
+        /* changeStatus(id, 'like'); */
         this.setState(({data})=>{
             const index = data.findIndex(elem=>elem.id===id);
             const old = data[index];
@@ -72,7 +73,15 @@ export default class App extends  Component {
             return { data: newArr}
         })
     }
-
+/*     changeStatus (id, status) {
+        this.setState(({ data }) => {
+            const index = data.findIndex(elem => elem.id === id);
+            const old = data[index];
+            const newItem = { ...old, status: !old.status }
+            const newArr = [...data.slice(0, index), newItem, ...data.slice(index + 1)]
+            return { data: newArr }
+        })
+    } */
     render() {
         return (
             <div className="app">
